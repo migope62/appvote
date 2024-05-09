@@ -1,0 +1,30 @@
+{
+  "name": "citizen-pulse",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "formik": "^2.4.6",
+    "next": "^14.2.3",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-hook-form": "^7.51.4",
+    "react-icons": "^5.2.1",
+    "react-responsive": "^10.0.0",
+    "react-router-dom": "^6.23.0",
+    "react-select": "^5.8.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.8",
+    "@types/react": "^18.3.1",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.3",
+    "typescript": "^5.4.5"
+  }
+}

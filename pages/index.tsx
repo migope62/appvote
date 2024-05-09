@@ -1,10 +1,5 @@
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-import '../styles/global.css'
-import '../styles/index.css'
-import '../styles/header.css';
-import '../styles/footer.css';
-import '../styles/propose.css';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 

@@ -1,7 +1,8 @@
-
+import Header from '../components/Header'
+import Footer from '../components/Footer';
 import { useFormik } from 'formik';
-import '../styles/propose.css';
-import '../styles/global.css';
+
+
 
 const Propose: React.FC = () => {
     const formik = useFormik({
@@ -17,7 +18,9 @@ const Propose: React.FC = () => {
     });
 
     return (
+           
         <div className="container1">
+                <Header />
             <form onSubmit={formik.handleSubmit}>
                 <h1>Proposer un choix de vote</h1>
                 <div>
@@ -41,7 +44,9 @@ const Propose: React.FC = () => {
                 </div>
                 <button type="submit"><span className="text">Proposer</span></button>
             </form>
+                <Footer />
         </div>
+      
     );
 };
 

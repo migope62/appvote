@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import '../styles/header.css';
+
 
 export default function Header() {
     const [showMenu, setShowMenu] = useState(false);

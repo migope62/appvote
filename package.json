@@ -9,7 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@types/mysql": "^2.15.26",
+    "axios": "^1.6.8",
     "formik": "^2.4.6",
+    "mysql": "^2.18.1",
     "next": "^14.2.3",
     "react": "^18",
     "react-dom": "^18",

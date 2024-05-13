@@ -41,10 +41,20 @@
 
 .container1 button {
     margin: 0 auto;
+    max-width: 100%;
 }
 
 @media (max-width: 768px) {
     .container1 form {
         margin-top: 2rem
     }
+        .container1 button {
+            margin: 0 auto;
+        }
+}
+@media (max-width: 400px) {
+    .container1 button {
+            margin: 0 auto;
+            font-size: 0.7rem;
+        }
 }

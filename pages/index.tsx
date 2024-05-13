@@ -6,9 +6,25 @@ import Footer from '../components/Footer';
 export default function Home() {
     const router = useRouter();
 
-    const handleProposeClick = () => {
-        router.push('/propose');
+    const handleVote = async (option: string) => {
+        try {
+            const response = await fetch('/api/vote', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ option }),
+            });
+            if (response.ok) {
+                console.log('Vote enregistré avec succès !');
+            } else {
+                console.error('Échec de l\'enregistrement du vote');
+            }
+        } catch (error) {
+            console.error('Erreur lors de l\'enregistrement du vote :', error);
+        }
     };
+
 
     return (
         <div>
@@ -19,18 +35,18 @@ export default function Home() {
                 <ul>
                     <li>Un bilan psy gratuit  à 10</li>
                     <div className="button-group">
-                    <button type="submit"><span>oui</span></button>
-                    <button type="submit"><span>non</span></button>
+                        <button type="button" onClick={() => handleVote('oui')}><span>oui</span></button>
+                        <button type="button" onClick={() => handleVote('non')}><span>non</span></button>
                     </div>
                     <li>Réglementation des réseaux sociaux</li>
                     <div className="button-group">
-                        <button type="submit"><span>oui</span></button>
-                        <button type="submit"><span>non</span></button>
+                        <button type="button" onClick={() => handleVote('oui')}><span>oui</span></button>
+                        <button type="button" onClick={() => handleVote('non')}><span>non</span></button>
                     </div>
                     <li>Réforme de l éducation</li>
                     <div className="button-group">
-                        <button type="submit"><span>oui</span></button>
-                        <button type="submit"><span>non</span></button>
+                        <button type="button" onClick={() => handleVote('oui')}><span>oui</span></button>
+                        <button type="button" onClick={() => handleVote('non')}><span>non</span></button>
                     </div>
                 </ul>
             </div>
